@@ -12,4 +12,7 @@ def home(request,*args,**kwargs):
     return render(request,'home.html')
 
 def contact(request,*args,**kwargs):
-    return HttpResponse("<h1>Contact Page</h1>")
+    return render(request,'contact.html')
+
+def about(request,*args,**kwargs):
+    return render(request,'about.html')
