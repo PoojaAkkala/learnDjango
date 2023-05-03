@@ -58,7 +58,7 @@ ROOT_URLCONF = 'learnDjango.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['/Users/Lenovo/Desktop/django/djangoenv/src/learnDjango/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

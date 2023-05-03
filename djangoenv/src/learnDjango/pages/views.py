@@ -8,10 +8,8 @@ from django.views.generic import TemplateView
 # class MyView(TemplateView):
 #     template_name = 'myapp/index.html'
 
-def home(request):
-    """
-    View function for the home page.
-    """
-    context = {'message': 'Welcome to the home page!'}
-    return HttpResponse("<h1>Hello World</h1>")
-    # return render(request,'<h1>Hello World</h1>')
+def home(request,*args,**kwargs):
+    return render(request,'home.html')
+
+def contact(request,*args,**kwargs):
+    return HttpResponse("<h1>Contact Page</h1>")
