@@ -12,6 +12,12 @@ def product_delete_view(request,id):
     return render(request,"products/delete.html",context)
 
 
+def product_list_view(request):
+    objs= Product.objects.all()
+    context={"objects":objs}
+    return render(request,"products/listProd.html",context)
+
+
 def dynamic_lookup_view(request,id):
     # try:
     #     obj=Product.objects.get(id=id)

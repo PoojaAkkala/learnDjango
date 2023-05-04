@@ -1,0 +1,9 @@
+{%extends 'baseHead.html'%}
+
+{%block content%}
+{{objects}}
+{%for instance in objects%}
+    <p>{{instance.id}}</p>
+    <p>{{instance.title}}</p>
+{%endfor%}
+{%endblock%}
