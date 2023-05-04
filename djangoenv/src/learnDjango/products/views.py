@@ -1,9 +1,14 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from .models import Product
+from django.http import Http404
 from .forms import ProductCreateForm, RawProductsForm
 # Create your views here.
 def dynamic_lookup_view(request,id):
-    obj=Product.objects.get(id=id)
+    # try:
+    #     obj=Product.objects.get(id=id)
+    # except Product.DoesNotExist:
+    #     raise Http404 
+    obj=get_object_or_404(Product,id=id)
     context={"object":obj}
     return render(request,"products/detail.html",context)
 
