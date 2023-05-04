@@ -1,6 +1,7 @@
 {%extends 'baseHead.html'%}
 
 {%block content%}
-{{title}}
-<p>{%if description%}{{description}}{%else%}{{'comming soon'}}{%endif%}</p>
+{{object.title}}
+<p>{%if object.description%}{{object.description}}{%else%}{{'comming soon'}}{%endif%}</p>
+<p>Price:{{object.price}}$</p>
 {%endblock%}
