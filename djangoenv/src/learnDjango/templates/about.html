@@ -1,5 +1,17 @@
-{%extends 'baseHead.html%}
+{%extends 'baseHead.html'%}
 {%block content%}
     <h1>About Page</h1>
     <p>Welcome to the About page</p>
+    <h2>Name: {{name}}</h2>
+    {% if skills|length > 4 %}
+        <h4>Rank: Master</h4>
+    {% else %}
+        <h4>Rank: Beginner</h4>
+    {% endif %}
+    <h2>Skill set:</h2>
+    <ul>
+        {%for skill in skills%}
+            <li>{{skill}}</li>
+        {%endfor%}
+    </ul>
 {%endblock%}

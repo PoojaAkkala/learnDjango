@@ -15,4 +15,8 @@ def contact(request,*args,**kwargs):
     return render(request,'contact.html')
 
 def about(request,*args,**kwargs):
-    return render(request,'about.html')
+    aboutme = {
+        "name" : "Pooja",
+        "skills":["HTML","CSS","Python","JavaScript"]
+    }
+    return render(request,'about.html',aboutme)
