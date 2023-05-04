@@ -2,6 +2,11 @@ from django.shortcuts import render
 from .models import Product
 from .forms import ProductCreateForm, RawProductsForm
 # Create your views here.
+def dynamic_lookup_view(request,id):
+    obj=Product.objects.get(id=id)
+    context={"object":obj}
+    return render(request,"products/detail.html",context)
+
 def product_detail_view(request):
     obj = Product.objects.get(id=1)
     context={'object':obj}
